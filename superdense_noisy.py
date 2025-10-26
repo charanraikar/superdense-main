@@ -1,13 +1,3 @@
-"""
-Superdense Coding with Noise
-==============================
-This module implements superdense coding in the presence of quantum noise,
-simulating realistic quantum channels with decoherence and gate errors.
-
-Author: DEADSERPENT
-Platform: Qiskit
-"""
-
 import sys
 import io
 

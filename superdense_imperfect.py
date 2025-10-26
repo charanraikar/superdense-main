@@ -1,13 +1,3 @@
-"""
-Superdense Coding with Imperfect Gates
-========================================
-This module implements superdense coding with imperfect quantum gates,
-simulating systematic errors and calibration issues in real quantum hardware.
-
-Author: DEADSERPENT
-Platform: Qiskit
-"""
-
 import sys
 import io
 

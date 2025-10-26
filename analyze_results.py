@@ -1,13 +1,3 @@
-"""
-Superdense Coding Analysis and Comparison Module
-=================================================
-This module provides comprehensive analysis and visualization tools
-for comparing different superdense coding scenarios.
-
-Author: DEADSERPENT
-Platform: Qiskit
-"""
-
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Rectangle

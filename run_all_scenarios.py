@@ -1,16 +1,3 @@
-"""
-Comprehensive Superdense Coding Demonstration
-==============================================
-This script runs all superdense coding scenarios and generates a complete analysis:
-- Ideal (noiseless) simulation
-- Noisy simulation with different noise levels
-- Imperfect gates simulation
-- Comprehensive comparison and analysis
-
-Author: DEADSERPENT
-Platform: Qiskit
-"""
-
 import sys
 import io
 

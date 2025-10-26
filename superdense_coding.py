@@ -1,12 +1,3 @@
-"""
-Superdense Coding Implementation
-==================================
-This module implements the superdense coding protocol for transmitting 2 classical bits
-using 1 qubit, leveraging quantum entanglement.
-
-Author: DEADSERPENT
-Platform: Qiskit
-"""
 
 import sys
 import io

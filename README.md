@@ -91,7 +91,7 @@ superdense/
 To run the complete demonstration with all scenarios:
 
 ```bash
-python run_all_scenarios.py
+python main.py
 ```
 
 This will:

@@ -95,6 +95,7 @@ python run_all_scenarios.py
 ```
 
 This will:
+
 1. Run ideal (noiseless) simulations
 2. Run noisy simulations at low, medium, and high noise levels
 3. Run imperfect gate simulations
@@ -154,6 +155,7 @@ sdc.visualize_results(save_fig=True)
 Superdense coding is a quantum communication protocol that demonstrates quantum advantage over classical communication. It allows two parties (Alice and Bob) to transmit 2 classical bits of information by sending only 1 qubit, using pre-shared quantum entanglement.
 
 **Key Concept:**
+
 - **Classical**: Need 2 bits to send 2 bits of information
 - **Quantum**: Need 1 qubit to send 2 bits of information
 - **Advantage**: 2x information density!
@@ -161,10 +163,12 @@ Superdense coding is a quantum communication protocol that demonstrates quantum 
 ### Protocol Steps
 
 1. **Preparation** (Before communication)
+
    - Create a Bell state (maximally entangled pair): |Φ+⟩ = (|00⟩ + |11⟩) / √2
    - Give one qubit to Alice, one to Bob
 
 2. **Encoding** (Alice's action)
+
    - Alice wants to send 2 classical bits to Bob
    - She applies one of four gates to her qubit:
      - '00' → I (Identity - do nothing)
@@ -173,10 +177,12 @@ Superdense coding is a quantum communication protocol that demonstrates quantum 
      - '11' → ZX (Pauli-Z then Pauli-X)
 
 3. **Transmission**
+
    - Alice sends her qubit to Bob
    - Only 1 qubit travels through the channel!
 
 4. **Decoding** (Bob's action)
+
    - Bob performs a Bell measurement on both qubits
    - He applies CNOT and Hadamard gates
    - Measures both qubits
@@ -206,12 +212,12 @@ This is a genuine quantum advantage - there's no classical way to achieve the sa
 
 ### Expected Outcomes
 
-| Input Bits | Gates Applied | Output | Results |
-|------------|---------------|--------|---------|
-| 00 | I | 00 | Success in all ideal cases |
-| 01 | X | 01 | High-fidelity recovery |
-| 10 | Z | 10 | Robust in simulation, some hardware noise |
-| 11 | XZ | 11 | Occasional errors with hardware decoherence |
+| Input Bits | Gates Applied | Output | Results                                     |
+| ---------- | ------------- | ------ | ------------------------------------------- |
+| 00         | I             | 00     | Success in all ideal cases                  |
+| 01         | X             | 01     | High-fidelity recovery                      |
+| 10         | Z             | 10     | Robust in simulation, some hardware noise   |
+| 11         | XZ            | 11     | Occasional errors with hardware decoherence |
 
 ### Performance Summary
 
@@ -303,10 +309,12 @@ analyzer.generate_report()
 To run on real IBM Quantum hardware:
 
 1. **Set up IBM Quantum account**:
+
    - Create account at https://quantum.ibm.com/
    - Get your API token
 
 2. **Save credentials**:
+
 ```python
 from qiskit_ibm_runtime import QiskitRuntimeService
 
@@ -315,6 +323,7 @@ QiskitRuntimeService.save_account(channel="ibm_quantum", token="YOUR_TOKEN")
 ```
 
 3. **Modify the code** to use IBM backend:
+
 ```python
 from qiskit_ibm_runtime import QiskitRuntimeService
 
@@ -332,6 +341,7 @@ result = job.result()
 ## Contributing
 
 This is an educational project. Feel free to:
+
 - Experiment with different noise models
 - Add new analysis techniques
 - Implement additional quantum communication protocols
@@ -342,17 +352,21 @@ This is an educational project. Feel free to:
 ### Version 1.1 (Latest) - Bug Fixes and Improvements
 
 **Fixed Issues:**
+
 1. ✅ **Bit ordering bug** - Fixed measurement qubit ordering in noisy and imperfect simulations
+
    - Issue: Inputs 01 and 10 were being swapped in output
    - Solution: Corrected to use Qiskit's little-endian bit ordering
    - Files: `superdense_noisy.py`, `superdense_imperfect.py`
 
 2. ✅ **UTF-8 encoding error** - Fixed Windows console encoding issues
+
    - Issue: UnicodeEncodeError with special characters in output
    - Solution: Added UTF-8 encoding wrapper for Windows platform
    - Files: All Python files
 
 3. ✅ **Non-unitary matrix error** - Fixed imperfect gates noise model
+
    - Issue: Custom unitary matrices were mathematically incorrect
    - Solution: Replaced with depolarizing error model
    - File: `superdense_imperfect.py`
@@ -363,6 +377,7 @@ This is an educational project. Feel free to:
    - File: `superdense_imperfect.py`
 
 **Test Results After Fixes:**
+
 - Ideal: 100% success (4/4 cases) ✓
 - Noisy: ~90-92% success (all cases) ✓
 - Imperfect: 57-72% success (varies by case) ✓
@@ -386,10 +401,10 @@ This project is provided as-is for educational purposes.
 
 ## Author
 
-**DEADSERPENT**
+**CHARAN_RAIKAR**
 
 ---
 
 **Quantum Advantage in Action!** 🚀
 
-*Demonstrating the power of quantum entanglement for efficient communication.*
+_Demonstrating the power of quantum entanglement for efficient communication._
